@@ -1,0 +1,64 @@
+name:                extensible-example
+version:             0.1.0.0
+github:              "githubuser/extensible-example"
+license:             BSD3
+author:              "Shintaro Sakata"
+maintainer:          "shintaro.sakata.tokyo@gmail.com"
+copyright:           "2020 Shintaro Sakata"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description:         Please see the README on GitHub at <https://github.com/githubuser/extensible-example#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- extensible
+- extensible-skeleton
+
+default-extensions:
+- ConstraintKinds
+- DataKinds
+- ExplicitForAll
+- ExplicitNamespaces
+- FlexibleContexts
+- GADTs
+- PackageImports
+- TypeOperators
+- GeneralizedNewtypeDeriving
+- DerivingStrategies
+- OverloadedLabels
+- TypeApplications
+- ExplicitForAll
+- ScopedTypeVariables
+- OverloadedStrings
+- BlockArguments
+- RecordWildCards
+- TemplateHaskell
+- QuasiQuotes
+
+library:
+  source-dirs: src
+
+executables:
+  extensible-example-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - extensible-example
+
+tests:
+  extensible-example-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - extensible-example
