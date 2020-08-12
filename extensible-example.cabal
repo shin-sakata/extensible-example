@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 595f673853a427b72c78c458792a11f6c75a9e5ef63a57218951f5147617444f
+-- hash: c46e0c5f022deed5e20cbdbe7d1783c1fe54f911e4f484b06572f92b032df4fc
 
 name:           extensible-example
 version:        0.1.0.0
@@ -46,22 +46,6 @@ executable extensible-example-exe
       Paths_extensible_example
   hs-source-dirs:
       app
-  default-extensions: ConstraintKinds DataKinds ExplicitForAll ExplicitNamespaces FlexibleContexts GADTs PackageImports TypeOperators GeneralizedNewtypeDeriving DerivingStrategies OverloadedLabels TypeApplications ExplicitForAll ScopedTypeVariables OverloadedStrings BlockArguments RecordWildCards TemplateHaskell QuasiQuotes
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , extensible
-    , extensible-example
-    , extensible-skeleton
-  default-language: Haskell2010
-
-test-suite extensible-example-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_extensible_example
-  hs-source-dirs:
-      test
   default-extensions: ConstraintKinds DataKinds ExplicitForAll ExplicitNamespaces FlexibleContexts GADTs PackageImports TypeOperators GeneralizedNewtypeDeriving DerivingStrategies OverloadedLabels TypeApplications ExplicitForAll ScopedTypeVariables OverloadedStrings BlockArguments RecordWildCards TemplateHaskell QuasiQuotes
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
