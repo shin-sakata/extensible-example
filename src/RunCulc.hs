@@ -22,6 +22,8 @@ culculator :: HasCulc effs => Eff effs Int
 culculator = do
     two <- 1 `plus` 1
     one <- two `minus` 1
+    _ <- plusCulc -- 勿論これらも使える
+    _ <- minusCulc
     return one
 
 -- plus effを利用することができる文脈
